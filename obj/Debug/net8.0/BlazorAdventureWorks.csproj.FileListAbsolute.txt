@@ -27,3 +27,4 @@ C:\Users\neyamat.ullah\Projects\BlazorAdventureWorks\obj\Debug\net8.0\refint\Bla
 C:\Users\neyamat.ullah\Projects\BlazorAdventureWorks\obj\Debug\net8.0\BlazorAdventureWorks.pdb
 C:\Users\neyamat.ullah\Projects\BlazorAdventureWorks\obj\Debug\net8.0\BlazorAdventureWorks.genruntimeconfig.cache
 C:\Users\neyamat.ullah\Projects\BlazorAdventureWorks\obj\Debug\net8.0\ref\BlazorAdventureWorks.dll
+C:\Users\neyamat.ullah\Projects\BlazorAdventureWorks\obj\Debug\net8.0\BlazorAdventureWorks.sourcelink.json
