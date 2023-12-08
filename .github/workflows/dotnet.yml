@@ -9,7 +9,7 @@ on:
   pull_request:
     branches: [ "master" ]
 env:
-  COMPANY: ${{"Avanade"}}
+  COMPANY: ${{'Avanade'}}
 
 jobs:
   build:
@@ -18,4 +18,4 @@ jobs:
 
     steps:
     - name: Show Environment Variables
-      run: ${{COMPANY}}
+      run: COMPANY
