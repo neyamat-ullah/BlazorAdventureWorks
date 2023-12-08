@@ -10,8 +10,7 @@ on:
     branches: [ "master" ]
 env:
   DAY_OF_WEEK: Monday
-  MONTH: December
-  COUNT: ${{ (1+1) }}
+  MONTH_AND_YEAR: December 2023
 
 jobs:
   build:
@@ -20,4 +19,4 @@ jobs:
 
     steps:
     - name: Show Environment Variables
-      run: echo "Today is $DAY_OF_WEEK and month is $MONTH, Count is $COUNT"
+      run: echo "Today is $DAY_OF_WEEK and month is $MONTH_AND_YEAR"
