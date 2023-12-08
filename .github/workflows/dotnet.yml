@@ -10,6 +10,7 @@ on:
     branches: [ "master" ]
 env:
   DAY_OF_WEEK: Monday
+  MONTH: December
 
 jobs:
   build:
@@ -18,4 +19,4 @@ jobs:
 
     steps:
     - name: Show Environment Variables
-      run: echo "Today is $DAY_OF_WEEK"
+      run: echo "Today is $DAY_OF_WEEK and month is $MONTH"
