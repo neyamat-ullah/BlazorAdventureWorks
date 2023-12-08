@@ -9,7 +9,7 @@ on:
   pull_request:
     branches: [ "master" ]
 env:
-  COMPANY: Avanade
+  DAY_OF_WEEK: Monday
 
 jobs:
   build:
@@ -18,4 +18,4 @@ jobs:
 
     steps:
     - name: Show Environment Variables
-      run: echo "$COMPANY"
+      run: echo "Today is $DAY_OF_WEEK"
