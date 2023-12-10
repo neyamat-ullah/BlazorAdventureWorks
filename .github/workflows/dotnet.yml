@@ -16,4 +16,4 @@ jobs:
 
     steps:
     - name: Show Environment Variables
-      run: echo "${{ github.event_name }}"
+      run: echo "${{ github.workflow }}"
