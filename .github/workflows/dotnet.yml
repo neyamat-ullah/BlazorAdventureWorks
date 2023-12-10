@@ -16,4 +16,4 @@ jobs:
 
     steps:
     - name: Show Environment Variables
-      run: echo "${{ github.actor }}"
+      run: echo "${{ github.event_name }}"
