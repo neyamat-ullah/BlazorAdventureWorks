@@ -10,8 +10,9 @@ on:
   pull_request:
     branches: [ "master" ]
 env:
-  COMPANY_NAME: Avanade Deutschland GmbH
-
+  # Setting an environment variable with the value of a configuration variable
+  env_var: ${{ vars.ENV_CONTEXT_VAR }}
+  
 jobs:
   display-variables:
     name: ${{ vars.JOB_NAME }}
