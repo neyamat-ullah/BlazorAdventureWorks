@@ -1,10 +1,11 @@
-name: learn-github-actions
-run-name: ${{ github.actor }} is learning GitHub Actions
+name: Learn Github
+run-name: ${{ github.actor }} is learning Github
+
 on: [push]
 
 jobs:
-  check-bats-version:
+  First_Job:
     runs-on: ubuntu-latest
     steps:
-      - name: Step 1
-        run: echo "${{ job.services }}"
+      - name: First Step
+        run: echo "First Step"
