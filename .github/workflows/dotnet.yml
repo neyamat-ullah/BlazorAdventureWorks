@@ -1,11 +1,14 @@
-name: Learn Github
-run-name: ${{ github.actor }} is learning Github
+name: BlazorAdventureWorks_CI
+run-name: BlazorAdventureWorks
 
-on: [push]
+on: push
+
+env:
+  AUTHOR: Neyamat Ullah
 
 jobs:
   First_Job:
     runs-on: ubuntu-latest
     steps:
       - name: First Step
-        run: echo "First Step"
+        run: echo "$AUTHOR"
