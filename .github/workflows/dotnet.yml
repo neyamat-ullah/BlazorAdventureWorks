@@ -15,11 +15,15 @@ jobs:
     needs: Integration
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code repository
+        uses: actions/checkout@v3
       - name: Build solution
         run: dotnet build
   Test:
     needs: Build
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code repository
+        uses: actions/checkout@v3
       - name: Test solution
         run: dotnet test
