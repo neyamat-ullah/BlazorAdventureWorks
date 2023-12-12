@@ -3,7 +3,7 @@ run-name: BlazorAdventureWorks_CI
 
 on: [push, pull_request]
 
-permissions: write-all
+permissions: read-all
 
 env:
   AUTHOR: Neyamat Ullah
