@@ -1,7 +1,7 @@
 name: BlazorAdventureWorks
 run-name: BlazorAdventureWorks_CI
 
-on: push
+on: [push, pull_request]
 
 jobs:
   Integration:
