@@ -1,14 +1,15 @@
-name: BlazorAdventureWorks_CI
-run-name: BlazorAdventureWorks
+name: BlazorAdventureWorks
+run-name: BlazorAdventureWorks_CI
 
 on: push
 
-env:
-  AUTHOR: Neyamat Ullah
-
 jobs:
-  First_Job:
+  Integration:
     runs-on: ubuntu-latest
     steps:
-      - name: First Step
-        run: echo "$AUTHOR"
+    - name: Restore Resources
+      run: dotnet restore
+    - name: Build
+      run: dotnet build
+    - name: Run
+      run: dotnet run
