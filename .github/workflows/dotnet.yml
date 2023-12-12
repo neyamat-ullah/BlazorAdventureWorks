@@ -3,10 +3,17 @@ run-name: BlazorAdventureWorks_CI
 
 on: [push, pull_request]
 
+permissions: write-all
+
+env:
+  AUTHOR: Neyamat Ullah
+
 jobs:
   Code-Preparation:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
+      - name: Print Author
+        run: echo "${env.AUTHOR}"
         
