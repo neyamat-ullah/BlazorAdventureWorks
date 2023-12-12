@@ -15,5 +15,5 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
       - name: Print Author
-        run: echo "${env.AUTHOR}"
+        run: echo "$env.AUTHOR"
         
