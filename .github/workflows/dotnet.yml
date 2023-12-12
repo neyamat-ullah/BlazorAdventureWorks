@@ -7,11 +7,19 @@ jobs:
   Integration:
     runs-on: ubuntu-latest
     steps:
-    - name: Code Checkout
-      uses: actions/checkout@v4.1.1
-    - name: Restore Resources
-      run: dotnet restore
-    - name: Build
-      run: dotnet build
-    - name: Test
-      run: dotnet test
+      - name: Checkout code repository
+        uses: actions/checkout@v3
+      - name: Restore solution
+        run: dotnet restore
+  Build:
+    needs: Integration
+    runs-on: ubuntu-latest
+    steps:
+      - name: Build solution
+        run: dotnet build
+  Test:
+    needs: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Test solution
+        run: dotnet test
