@@ -25,7 +25,7 @@ jobs:
       - name: Test
         run: dotnet test
   Documentation:
-    needs: Prepare-Code
+    needs: Test-Code
     runs-on: ubuntu-latest
     steps:
       - name: Author
