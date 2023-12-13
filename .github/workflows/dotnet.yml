@@ -3,17 +3,32 @@ run-name: BlazorAdventureWorks_CI
 
 on: [push, pull_request]
 
-permissions: read-all
-
 env:
   AUTHOR: Neyamat Ullah
 
 jobs:
-  Code-Preparation:
+  Prepare-Code:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
+      - name: Code checkout
         uses: actions/checkout@v3
-      - name: Print Author
-        run: echo "$AUTHOR"
+      - name: Restore
+        run: dotnet restore
+      - name: Build
+        run: dotnet build
+  Test-Code:
+    needs: Prepare-Code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Code checkout
+        uses: actions/checkout@v3
+      - name: Test
+        run: dotnet test
+  Documentation:
+    needs: Prepare-Code
+    runs-on: ubuntu-latest
+    steps:
+      - name: Author
+        run: echo "Authored by: $env.AUTHOR"
+          
         
