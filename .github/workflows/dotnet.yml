@@ -29,6 +29,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Author
-        run: echo "Authored by: $env.AUTHOR"
+        run: echo "Authored by $AUTHOR"
           
         
